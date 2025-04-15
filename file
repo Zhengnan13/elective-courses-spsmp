@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>2025年度 双溪大年新民独中 选修课程报名</title>
+  <style>
+    body {
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #fff9f2;
+      color: #333;
+      padding: 20px;
+      max-width: 800px;
+      margin: auto;
+    }
+    h1, h2 {
+      text-align: center;
+    }
+    .course {
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      padding: 15px;
+      margin-bottom: 15px;
+      background-color: #fff;
+    }
+    .field {
+      margin-bottom: 12px;
+    }
+    .submit-area {
+      text-align: center;
+      margin-top: 20px;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      border: none;
+      border-radius: 8px;
+      background-color: #6b4f3b;
+      color: #fff;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h1>2025年度 双溪大年新民独中</h1>
+  <h2>选修课程报名 Elective Course Registration</h2>
+
+  <p><strong>截止日期：</strong>2025年5月20日</p>
+  <p><strong>联络电邮：</strong><a href="mailto:jhtang@spsmp.edu.my">jhtang@spsmp.edu.my</a></p>
+  <p>请选择你想报名的课程（最多10门）：</p>
+
+  <form action="https://docs.google.com/forms/d/e/1FAIpQLSdEXAMPLEURL/formResponse" method="POST" target="_blank">
+    <div class="field">
+      <label>姓名 Name:</label><br/>
+      <input type="text" name="entry.1234567890" required />
+    </div>
+    <div class="field">
+      <label>学号 Student ID:</label><br/>
+      <input type="text" name="entry.2345678901" required />
+    </div>
+    <div class="field">
+      <label>班级 Class:</label><br/>
+      <input type="text" name="entry.3456789012" required />
+    </div>
+
+    <!-- 所有课程复选框 -->
+    <div class="course"><input type="checkbox" name="entry.1111111111" value="公民、社会与法律" /> 公民、社会与法律（RM30）</div>
+    <div class="course"><input type="checkbox" name="entry.1111111111" value="异常与犯罪心理学" /> 异常与犯罪心理学（RM30）</div>
+    <div class="course"><input type="checkbox" name="entry.1111111111" value="认识中医" /> 认识中医（RM50）</div>
+    <div class="course"><input type="checkbox" name="entry.1111111111" value="翻滚吧！文学" /> 翻滚吧！文学（RM30）</div>
+
+    <div class="course"><input type="checkbox" name="entry.1111111111" value="花卉艺术" /> 花卉艺术（RM200）</div>
+    <div class="course"><input type="checkbox" name="entry.1111111111" value="木工与手作" /> 木工与手作（RM150）</div>
+    <div class="course"><input type="checkbox" name="entry.1111111111" value="创意市集与手作" /> 创意市集与手作（RM200）</div>
+
+    <div class="course"><input type="checkbox" name="entry.1111111111" value="书法艺术" /> 书法艺术（RM30）</div>
+    <div class="course"><input type="checkbox" name="entry.1111111111" value="钢笔淡彩" /> 钢笔淡彩（RM80）</div>
+    <div class="course"><input type="checkbox" name="entry.1111111111" value="水墨丹青" /> 水墨丹青（RM50）</div>
+    <div class="course"><input type="checkbox" name="entry.1111111111" value="影像与剪辑" /> 影像与剪辑（RM30）</div>
+    <div class="course"><input type="checkbox" name="entry.1111111111" value="室内与空间设计" /> 室内与空间设计（RM150）</div>
+
+    <div class="course"><input type="checkbox" name="entry.1111111111" value="魔术表演" /> 魔术表演（RM200）</div>
+    <div class="course"><input type="checkbox" name="entry.1111111111" value="声乐合唱" /> 声乐合唱（RM120）</div>
+    <div class="course"><input type="checkbox" name="entry.1111111111" value="戏剧表演与演员素养" /> 戏剧表演与演员素养（RM100）</div>
+
+    <div class="course"><input type="checkbox" name="entry.1111111111" value="咖啡实验室" /> 咖啡实验室（RM200）</div>
+    <div class="course"><input type="checkbox" name="entry.1111111111" value="中西餐烹饪" /> 中西餐烹饪（RM300）</div>
+    <div class="course"><input type="checkbox" name="entry.1111111111" value="西式烘焙" /> 西式烘焙（RM300）</div>
+
+    <div class="course"><input type="checkbox" name="entry.1111111111" value="游戏思维" /> 游戏思维（RM50）</div>
+    <div class="course"><input type="checkbox" name="entry.1111111111" value="科技与发明" /> 科技与发明（RM100）</div>
+    <div class="course"><input type="checkbox" name="entry.1111111111" value="西洋棋" /> 西洋棋（RM30）</div>
+
+    <div class="submit-area">
+      <button type="submit">提交报名</button>
+    </div>
+  </form>
+</body>
+</html>
