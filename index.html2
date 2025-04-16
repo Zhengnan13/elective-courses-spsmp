@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>学生选修课程报名表</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background-color: #f7f7f7;
+    }
+    h1, h2 {
+      text-align: center;
+    }
+    form {
+      max-width: 800px;
+      margin: 0 auto;
+      background: #fff;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    .course {
+      margin-bottom: 15px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      background-color: #fafafa;
+    }
+    .course label {
+      font-weight: bold;
+    }
+    .course small {
+      display: block;
+      color: #555;
+      margin-top: 5px;
+    }
+    button {
+      display: block;
+      margin: 20px auto;
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    .counter {
+      text-align: center;
+      font-weight: bold;
+      margin: 15px;
+    }
+  </style>
+</head>
+<body>
+  <h1>2025年度学生选修课程报名表</h1>
+  <h2>双溪大年新民独中</h2>
+  <p style="text-align: center;">报名截止日期：2025年5月20日｜联络邮箱：jhtang@spsmp.edu.my</p>
+
+  <form id="electiveForm">
+    <div class="counter">你已选择 <span id="selectedCount">0</span> / 10 门课程</div>
+
+    <div class="course">
+      <label><input type="checkbox" name="courses" value="法律"> 公民、社会与法律</label>
+      <small>人数限制：20｜费用：RM30｜特约老师：田政聪、巫苾楹、周鸿玮、谢国良</small>
+    </div>
+
+    <div class="course">
+      <label><input type="checkbox" name="courses" value="心理"> 异常与犯罪心理学</label>
+      <small>人数限制：20｜费用：RM30｜特约老师：林永坚、林咏欣</small>
+    </div>
+
+    <div class="course">
+      <label><input type="checkbox" name="courses" value="中医"> 认识中医</label>
+      <small>人数限制：30｜费用：RM50｜特约老师：许豪然</small>
+    </div>
+
+    <div class="course">
+      <label><input type="checkbox" name="courses" value="文学"> 翻滚吧！文学</label>
+      <small>人数限制：20｜费用：RM30｜特约老师：罗湘婷</small>
+    </div>
+
+    <!-- 可继续添加其余课程，照上述格式 -->
+
+    <button type="submit">提交报名</button>
+  </form>
+
+  <script>
+    const form = document.getElementById("electiveForm");
+    const checkboxes = form.querySelectorAll("input[type='checkbox']");
+    const countDisplay = document.getElementById("selectedCount");
+
+    function updateCount() {
+      const checked = form.querySelectorAll("input[type='checkbox']:checked").length;
+      countDisplay.textContent = checked;
+      checkboxes.forEach(cb => {
+        if (!cb.checked && checked >= 10) {
+          cb.disabled = true;
+        } else {
+          cb.disabled = false;
+        }
+      });
+    }
+
+    checkboxes.forEach(cb => cb.addEventListener('change', updateCount));
+    updateCount();
+
+    form.addEventListener("submit", function(e) {
+      e.preventDefault();
+      const checked = form.querySelectorAll("input[type='checkbox']:checked").length;
+      if (checked !== 10) {
+        alert("请确保你选择了 10 门课程再提交。");
+        return;
+      }
+      alert("已成功提交报名！");
+    });
+  </script>
+</body>
+</html>
